@@ -7,12 +7,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1iS7O1YT6GuPTcnDTsBZHP1ZAXF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Cviceni3" />
   </component>
   <component name="RunManager">
@@ -27,6 +33,7 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -37,13 +44,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601889103453</updated>
+      <workItem from="1604416758217" duration="141000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1601889152662">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604416887796">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601889152662" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604416887796" />
+    <state x="625" y="224" key="NewModule_or_Project.wizard" timestamp="1604416913803">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="625" y="224" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1604416913803" />
   </component>
 </project>
