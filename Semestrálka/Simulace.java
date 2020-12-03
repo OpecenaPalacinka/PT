@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 /**
  * Hlavní tøída programu, naèítá data ze souboru a rozdìluje je do polí
- *
+ * @author Muhr && Pelikán
  */
 public class Simulace {
 
@@ -13,37 +13,72 @@ public class Simulace {
 	 * Naètení Scanneru
 	 */
 	public static Scanner sc;
-
-	private static int c; // Globalni Counter
-	private static int d = 0;  // Pocet Tovaren
-	private static int s = 0;  // Pocet Supermarketu
-	private static int z = 0;  // Pocet Typu Zbozi
-	private static int t = 0;  // Pocet Dni
-	
-	// Matice s daty a vztahy mezi nimi
-	private static int[][] cena_provozu;
-	private static int[][] pocatecni_zasoby;
-	private static int[][][] produkce_tovaren;
-	private static int[][][] poptavka_zbozi;
-	
-	// Pole pro prvotni ulozeni dat
-	private static ArrayList<Integer> data1;
-	private static ArrayList<Integer> data2;
-	private static ArrayList<Integer> data3;
-	private static ArrayList<Integer> data4;
-	
 	/**
-	 * Nacte data po vlozeni stringu s nazvem souboru 
-	 * a ulozi je do promenych a poli
-	 * @param nazevSouboru  String s nazvem souboru
+	 * Globalni Counter
 	 */
-	public static void nactiData(String nazevSouboru) {
+	private static int c;
+	/**
+	 * Pocet Tovaren
+	 */
+	private static int d = 0;
+	/**
+	 * Pocet Supermarketu
+	 */
+	private static int s = 0;
+	/**
+	 * Pocet Typu Zbozi
+	 */
+	private static int z = 0;
+	/**
+	 * Pocet Dni
+	 */
+	private static int t = 0;
+
+	/**
+	 * Matice ceny pøevozu
+	 */
+	private static int[][] cena_provozu;
+	/**
+	 * Matice poèáteèních zásob
+	 */
+	private static int[][] pocatecni_zasoby;
+	/**
+	 * Matice produkce továren
+	 */
+	private static int[][][] produkce_tovaren;
+	/**
+	 * Matice poptávky zboží
+	 */
+	private static int[][][] poptavka_zbozi;
+
+	/**
+	 * ArrayList pro první data (matice ceny pøevozu)
+	 */
+	private static ArrayList<Integer> data1 = new ArrayList<Integer>();
+	/**
+	 * ArrayList pro druhá data (matice poèáteèních zásob)
+	 */
+	private static ArrayList<Integer> data2 = new ArrayList<Integer>();
+	/**
+	 * ArrayList pro tøetí data (matice produkce továren)
+	 */
+	private static ArrayList<Integer> data3 = new ArrayList<Integer>();
+	/**
+	 * ArrayList pro ètvrtá data (matice poptávky zboží)
+	 */
+	private static ArrayList<Integer> data4 = new ArrayList<Integer>();
+
+	/**
+	 * Naète data do "sc" ze vstupního souboru
+	 * @param nazevSouboru Název souboru, který chceme èíst
+	 */
+	public static void nacteniFilu(String nazevSouboru){
 		// -------------------------
 		//   Nacteni filu
 		// -------------------------
-		
+
 		System.out.println("------------Nacitani Souboru---------------\n");
-		
+
 		File vstup = new File(nazevSouboru);
 		try {
 			sc = new Scanner(vstup);
@@ -51,22 +86,15 @@ public class Simulace {
 			System.out.println("Soubor nebyl nalezen");
 			e.printStackTrace();
 		}
-		
-		// -------------------------
-		//  Vytvoreni promenych
-		// -------------------------
-		
+	}
+	
+	/**
+	 * Nacte data a ulozi je do promenych a poli
+	 */
+	public static void nactiData() {
+
 		c = 0; // counter
-		d = 0;
-		s = 0;
-		z = 0;
-		t = 0;
-		
-		data1 = new ArrayList<Integer>();
-		data2 = new ArrayList<Integer>();
-		data3 = new ArrayList<Integer>();
-		data4 = new ArrayList<Integer>();
-		
+
 		// -------------------------
 		// Cteni filu a ukladani hodnot
 		// -------------------------
@@ -87,41 +115,41 @@ public class Simulace {
 				}
 			}
 			if (c == 1) { // Prvni informace
-				String parts[] = st.split(" ", 4);
+				String[] parts = st.split(" ", 4);
 				d = Integer.parseInt(parts[0].trim());
 				s = Integer.parseInt(parts[1].trim());
 				z = Integer.parseInt(parts[2].trim());
 				t = Integer.parseInt(parts[3].trim());
 			}
 			else if (c == 2) { // Druha informace
-				String parts[] = st.split(" ", s);
-				for (int i = 0; i<parts.length;i++) {
-					data1.add(Integer.parseInt(parts[i].trim()));
+				String[] parts = st.split(" ", s);
+				for (String part : parts) {
+					data1.add(Integer.parseInt(part.trim()));
 				}
 			}
 			else if (c == 3) { // Treti informace
-				String parts[] = st.split(" ", s);
-				for (int i = 0; i<parts.length;i++) {
-					data2.add(Integer.parseInt(parts[i].trim()));
+				String[] parts = st.split(" ", s);
+				for (String part : parts) {
+					data2.add(Integer.parseInt(part.trim()));
 				}
 			}
 			else if (c == 4) { // Ctvrta informace
-				String parts[] = st.split(" ", d);
-				for (int i = 0; i<parts.length;i++) {
-					data3.add(Integer.parseInt(parts[i].trim()));
+				String[] parts = st.split(" ", d);
+				for (String part : parts) {
+					data3.add(Integer.parseInt(part.trim()));
 				}
 			}
 			else if (c == 5) { // Pata informace
 				if (st.equals("")) {
 					break;
 				}
-				String parts[] = st.split(" ", s);
-				for (int i = 0; i<parts.length;i++) {
-					data4.add(Integer.parseInt(parts[i].trim()));
+				String[] parts = st.split(" ", s);
+				for (String part : parts) {
+					data4.add(Integer.parseInt(part.trim()));
 				}
 			}
 			
-			System.out.println(st);
+			//System.out.println(st);
 		}
 	}
 	
@@ -137,7 +165,7 @@ public class Simulace {
 		
 		c = 0;
 		
-		cena_provozu = new int[d][s];
+		cena_provozu = new int[s][d];
 
 		//Pøedání dat do správného pole (matice) -- cena_provozu d,s -- cena pøevozu jednoho kusu libovolného zboží z továrny D do supermarketu S
         for (int i = 0; i < cena_provozu.length; i++) {
@@ -197,10 +225,10 @@ public class Simulace {
 		System.out.println("S / Pocet supermarketu = " + s);
 		System.out.println("Z / Pocet druhu zbozi = " + z);
 		System.out.println("T / Pocet dni = " + t);
-		System.out.println("\nCena prevozu jednoho zbozi (hodnoty v poli)\n" + data1);
-		System.out.println("\nPocatecni skladove zasoby (hodnoty v poli)\n" + data2);
-		System.out.println("\nProdukce tovaren (hodnoty v poli)\n" + data3);
-		System.out.println("\nPoptavka zbozi (hodnoty v poli)\n" + data4);
+		//System.out.println("\nCena prevozu jednoho zbozi (hodnoty v poli)\n" + data1);
+		//System.out.println("\nPocatecni skladove zasoby (hodnoty v poli)\n" + data2);
+		//System.out.println("\nProdukce tovaren (hodnoty v poli)\n" + data3);
+		//System.out.println("\nPoptavka zbozi (hodnoty v poli)\n" + data4);
 		
 		data1.clear();
 		data2.clear();
@@ -212,14 +240,14 @@ public class Simulace {
 	 * Spusti se simulace a vypocita se finalni cena
 	 * @return vraci celkovou cenu
 	 */
-	public static int simulace() {
+	public static double simulace() {
 		//------------------------
 		//      Simulace 
 		//------------------------
 		
 		System.out.println("\n------  Simulace  ------");
 		
-		int celkova_cena = 0; // Celkova cena
+		double celkova_cena = 0; // Celkova cena
 		
 		
 		for (int a = 0; a<t;a++) {
@@ -237,14 +265,14 @@ public class Simulace {
 					
 					System.out.println("Pro " + (x+1) + ". supermarket je nutno sehnat " + Math.abs(nutne_zbozi) + " zbozi cislo " + (y+1));
 					
-					// zjisteji nejlevnejsi tovarny pro prvni supermarket
+					// zjisteji nejlevnejsi tovarny pro supermarket
 					
 					ArrayList<Integer> Pouzite_tovarny = new ArrayList<Integer>(); // uchovava indexy pouzitych tovaren
 					
 					int temp = Integer.MAX_VALUE;
 					int nejm_cena = 0;
 					int cislo_tovarny = 0;
-					for (int i = 0; i<cena_provozu.length;i++) {
+					for (int i = 0; i<d;i++) {
 //					System.out.println(cena_provozu[0][i]);
 						if (cena_provozu[x][i]<temp) {
 							nejm_cena = cena_provozu[x][i];	
@@ -259,11 +287,11 @@ public class Simulace {
 					nutne_zbozi += produkce_tovaren[cislo_tovarny][y][a]; 
 					if (nutne_zbozi>=0) {  // Kontrola, jestli nam stacili zasoby
 						System.out.println("Zasoby z tovarny stacili pro splneni poptavky");
-						// TODO Zbytek z tovarny pridame do zasob
 						prebytek = nutne_zbozi;
+
 					}
 					
-					celkova_cena+=nejm_cena*produkce_tovaren[cislo_tovarny][y][a]-prebytek; // pripocte cenu
+					celkova_cena += nejm_cena * produkce_tovaren[cislo_tovarny][y][a] - prebytek; // pripocte cenu
 					
 					System.out.println("Nejlevnejsi cena je " + nejm_cena + "$ v tovarne cislo " + (cislo_tovarny+1));
 					System.out.println("Celkova cena je zatim: " + celkova_cena);
@@ -274,7 +302,7 @@ public class Simulace {
 						temp = Integer.MAX_VALUE;
 						nejm_cena = 0;
 						cislo_tovarny = 0;
-						for (int i = 0; i<cena_provozu.length;i++) {
+						for (int i = 0; i<d;i++) {
 //						System.out.println(cena_provozu[0][i]);
 							if (cena_provozu[x][i]<temp && !Pouzite_tovarny.contains(i)) {
 								nejm_cena = cena_provozu[x][i];	
@@ -286,7 +314,6 @@ public class Simulace {
 						}
 						if (nejm_cena==0) {
 							System.out.println("\nNenalezena dalsi tovarna, a zbozi doslo, nutno dokoupit z Ciny");
-							// TODO Vymyslet, co delat pri nutnem nakupu z ciny
 							break;
 						}
 						
@@ -296,8 +323,8 @@ public class Simulace {
 						nutne_zbozi += produkce_tovaren[cislo_tovarny][y][a]; 
 						if (nutne_zbozi>=0) {  // Kontrola, jestli nam stacili zasoby
 							System.out.println("Zasoby z tovarny stacili pro splneni poptavky");
-							// TODO Zbytek z tovarny pridame do zasob
 							prebytek = nutne_zbozi;
+
 							System.out.println("Prebytek je: " + prebytek);
 						}
 						
@@ -308,7 +335,7 @@ public class Simulace {
 					}
 					
 					Pouzite_tovarny.clear();
-					
+
 				}
 			}
 		}
@@ -320,12 +347,13 @@ public class Simulace {
 	 * @param arg Argumenty pøíkazové øádky
 	 */
 	public static void main(String[] arg){
-		
-		nactiData("pt_2020_2021_data/real_large.txt");
+
+		nacteniFilu("pt_2020_2021_data/test_optim.txt");
+		nactiData();
 		
 		zpracujHodnoty();
 		
-		int cena = simulace();
+		double cena = simulace();
 		
 		System.out.println("\nCelkova cena je: " + cena);
 		

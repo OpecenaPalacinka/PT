@@ -1,0 +1,1 @@
+pmd -d C:\Users\Pelikán\Desktop\3.Semestr\PT\Semestrálka\Simulace.java -f text -R C:\Users\Pelikán\Desktop\3.Semestr\PT\Semestrálka\pmdrules.xml
