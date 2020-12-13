@@ -1,0 +1,97 @@
+
+------Informace po zpracovani----
+
+D / Pocet tovaren = 2
+S / Pocet supermarketu = 2
+Z / Pocet druhu zbozi = 2
+T / Pocet dni = 2
+
+Cena prevozu jednoho zbozi (hodnoty v poli)
+[1, 1, 1, 100]
+
+Pocatecni skladove zasoby (hodnoty v poli)
+[0, 0, 0, 0]
+
+Produkce tovaren (hodnoty v poli)
+[10, 10, 10, 10, 10, 10, 10, 10]
+
+Poptavka zbozi (hodnoty v poli)
+[0, 20, 0, 20, 20, 0, 20, 0]
+
+------  Simulace  ------
+
+-----1. Den-----
+
+----1. Supermarket----
+---1. Zbozi---
+Pro 1. supermarket je nutno sehnat 0 zbozi cislo 1
+Zasoby z tovarny stacili pro splneni poptavky
+Nejlevnejsi cena je 1$ v tovarne cislo 1
+Celkova cena je zatim: 0.0
+---2. Zbozi---
+Pro 1. supermarket je nutno sehnat 0 zbozi cislo 2
+Zasoby z tovarny stacili pro splneni poptavky
+Nejlevnejsi cena je 1$ v tovarne cislo 1
+Celkova cena je zatim: 0.0
+
+----2. Supermarket----
+---1. Zbozi---
+Pro 2. supermarket je nutno sehnat 20 zbozi cislo 1
+Nejlevnejsi cena je 1$ v tovarne cislo 1
+Celkova cena je zatim: 10.0
+Jeste je potreba sehnat: 10 zbozi cislo 1
+Nalezena dalsi dostupna nejlevnejsi tovarna cislo 2
+Cena cesty z teto tovarny je 100$
+Zasoby z tovarny stacili pro splneni poptavky
+Prebytek je: 0
+Celkova cena je zatim: 1010.0
+---2. Zbozi---
+Pro 2. supermarket je nutno sehnat 20 zbozi cislo 2
+Nejlevnejsi cena je 1$ v tovarne cislo 1
+Celkova cena je zatim: 1020.0
+Jeste je potreba sehnat: 10 zbozi cislo 2
+Nalezena dalsi dostupna nejlevnejsi tovarna cislo 2
+Cena cesty z teto tovarny je 100$
+Zasoby z tovarny stacili pro splneni poptavky
+Prebytek je: 0
+Celkova cena je zatim: 2020.0
+
+-----2. Den-----
+
+----1. Supermarket----
+---1. Zbozi---
+Pro 1. supermarket je nutno sehnat 20 zbozi cislo 1
+Nejlevnejsi cena je 1$ v tovarne cislo 1
+Celkova cena je zatim: 2030.0
+Jeste je potreba sehnat: 10 zbozi cislo 1
+Nalezena dalsi dostupna nejlevnejsi tovarna cislo 2
+Cena cesty z teto tovarny je 1$
+Zasoby z tovarny stacili pro splneni poptavky
+Prebytek je: 0
+Celkova cena je zatim: 2040.0
+---2. Zbozi---
+Pro 1. supermarket je nutno sehnat 20 zbozi cislo 2
+Nejlevnejsi cena je 1$ v tovarne cislo 1
+Celkova cena je zatim: 2050.0
+Jeste je potreba sehnat: 10 zbozi cislo 2
+Nalezena dalsi dostupna nejlevnejsi tovarna cislo 2
+Cena cesty z teto tovarny je 1$
+Zasoby z tovarny stacili pro splneni poptavky
+Prebytek je: 0
+Celkova cena je zatim: 2060.0
+
+----2. Supermarket----
+---1. Zbozi---
+Pro 2. supermarket je nutno sehnat 0 zbozi cislo 1
+Zasoby z tovarny stacili pro splneni poptavky
+Nejlevnejsi cena je 1$ v tovarne cislo 1
+Celkova cena je zatim: 2060.0
+---2. Zbozi---
+Pro 2. supermarket je nutno sehnat 0 zbozi cislo 2
+Zasoby z tovarny stacili pro splneni poptavky
+Nejlevnejsi cena je 1$ v tovarne cislo 1
+Celkova cena je zatim: 2060.0
+
+-----------------------------------
+Celkova cena je: 2060.0
+Byl vygenerovan soubor statistiky.txt, který obsahuje vsechny dulezite informace

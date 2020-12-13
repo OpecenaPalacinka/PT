@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/DataGenerator.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/DataGeneratorGauss.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/DataGeneratorRovno.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/MainMenu.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/PT_Muhr_Pelikan/PT Semestralka/src/DataGenerator.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/PT_Muhr_Pelikan/PT Semestralka/src/DataGeneratorGauss.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/PT_Muhr_Pelikan/PT Semestralka/src/DataGeneratorRovno.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/PT_Muhr_Pelikan/PT Semestralka/src/MainMenu.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/PT_Muhr_Pelikan/PT Semestralka/src/Simulace.java" charset="windows-1250" />
     <file url="file://$PROJECT_DIR$/Simulace.java" charset="windows-1250" />
     <file url="file://$PROJECT_DIR$/TestVstupu.java" charset="windows-1250" />
   </component>

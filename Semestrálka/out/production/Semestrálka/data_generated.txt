@@ -1,10 +1,13 @@
 # Data pro semestralni praci KIV/PT 2020/2021
-# Vytvoreno systemem "Muhr && PelikĂˇn", 31.8.2020.
+# Vytvoreno systemem "Muhr && Pelikán", 31.8.2020.
 #
 # prazdne radky nebo radky zacinajici znakem # se ingoruji
 # v opacnem pripade jsou na kazde radce ciselne hodnoty oddelene mezerou
 # data jsou popsana vzdy nad prislusnym blokem dat, bloky jsou oddelene
 # prazdnym radkem nasledujici radkem viditelne oznacenym vyrazem "BLOK:"
+
+# BLOK: pocet tovaren D, pocet supermarketu S, pocet druhu zbozi Z, pocet dni T
+1 2 3 6
 
 # BLOK: Cena prevozu jednoho zbozi c_{s,d}
 #
@@ -14,9 +17,7 @@
 #    .      .     .     .
 #    .      .      .    .
 # c_{1,D} c_{2,D} ... c_{S,D}
-
-5	10	
-7	7	
+15 3 
 
 # BLOK: Pocatecni skladove zasoby q_{z,s}
 #
@@ -26,9 +27,9 @@
 #    .      .     .     .
 #    .      .      .    .
 # q_{Z,1} q_{Z,2} ... q_{Z,S}
-
-7	3	
-8	2	
+10 13 
+15 13 
+8 14 
 
 # BLOK: Produkce tovaren p_{d,z,t}
 # p_{1,1,1} p_{2,1,1} .... p_{D,1,1}
@@ -44,11 +45,24 @@
 #      .         .      .       .
 #      .         .       .      .
 # p_{1,Z,T} p_{2,Z,T} .... p_{D,Z,T}
-
-3	9	
-8	9	
-8	2	
-4	8	
+4 
+7 
+11 
+13 
+12 
+2 
+5 
+3 
+3 
+10 
+4 
+14 
+5 
+14 
+7 
+1 
+5 
+8 
 
 # BLOK: Poptavka zbozi r_{s,z,t}
 # r_{1,1,1} r_{2,1,1} .... r_{S,1,1}
@@ -64,13 +78,26 @@
 #      .         .      .       .
 #      .         .       .      .
 # r_{1,Z,T} r_{2,Z,T} .... r_{S,Z,T}
+2 2 
+10 7 
+2 2 
+6 4 
+2 2 
+1 15 
+12 8 
+6 1 
+6 15 
+1 5 
+1 6 
+3 6 
+1 9 
+9 11 
+6 8 
+6 1 
+14 1 
+5 9 
 
-5	4	
-6	4	
-5	10	
-3	3	
-
-# GAUSSOVSKĂť BLOK: Cena prevozu jednoho zbozi c_{s,d}
+# GAUSSOVSKÝ BLOK: Cena prevozu jednoho zbozi c_{s,d}
 #
 # c_{1,1} c_{2,1} ... c_{S,1}
 # c_{1,2} c_{2,2} ... c_{S,2}
@@ -78,11 +105,9 @@
 #    .      .     .     .
 #    .      .      .    .
 # c_{1,D} c_{2,D} ... c_{S,D}
+1 5 
 
-6	6	
-4	4	
-
-# GAUSSOVSKĂť BLOK: Pocatecni skladove zasoby q_{z,s}
+# GAUSSOVSKÝ BLOK: Pocatecni skladove zasoby q_{z,s}
 #
 # q_{1,1} q_{1,2} ... q_{1,S}
 # q_{2,1} q_{2,2} ... q_{2,S}
@@ -90,11 +115,11 @@
 #    .      .     .     .
 #    .      .      .    .
 # q_{Z,1} q_{Z,2} ... q_{Z,S}
+13 10 
+11 11 
+15 11 
 
-7	8	
-6	5	
-
-# GAUSSOVSKĂť BLOK: Produkce tovaren p_{d,z,t}
+# GAUSSOVSKÝ BLOK: Produkce tovaren p_{d,z,t}
 # p_{1,1,1} p_{2,1,1} .... p_{D,1,1}
 # p_{1,1,2} p_{2,1,2} .... p_{D,1,2}
 #      .         .    .         .
@@ -108,13 +133,26 @@
 #      .         .      .       .
 #      .         .       .      .
 # p_{1,Z,T} p_{2,Z,T} .... p_{D,Z,T}
+1 
+14 
+9 
+7 
+6 
+11 
+3 
+7 
+5 
+9 
+4 
+19 
+15 
+14 
+7 
+4 
+21 
+10 
 
-7	2	
-13	0	
-6	6	
-4	4	
-
-# GAUSSOVSKĂť BLOK: Poptavka zbozi r_{s,z,t}
+# GAUSSOVSKÝ BLOK: Poptavka zbozi r_{s,z,t}
 # r_{1,1,1} r_{2,1,1} .... r_{S,1,1}
 # r_{1,1,2} r_{2,1,2} .... r_{S,1,2}
 #      .         .    .         .
@@ -128,8 +166,21 @@
 #      .         .      .       .
 #      .         .       .      .
 # r_{1,Z,T} r_{2,Z,T} .... r_{S,Z,T}
-
-0	8	
-9	4	
-10	8	
-6	6	
+2 5 
+11 8 
+1 2 
+0 12 
+9 10 
+9 4 
+7 6 
+6 10 
+15 4 
+19 15 
+5 14 
+4 5 
+6 17 
+2 20 
+5 9 
+12 8 
+5 4 
+15 11 

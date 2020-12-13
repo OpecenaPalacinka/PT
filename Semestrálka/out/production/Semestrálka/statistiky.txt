@@ -1,0 +1,22 @@
+Zásoby supermarketů jsou reálné jen první den, protože nekřečkujeme.
+1. supermarket má 1 zásobu/y 1. zboží v den 1
+1. supermarket má 2 zásobu/y 2. zboží v den 1
+2. supermarket má 1 zásobu/y 1. zboží v den 1
+2. supermarket má 2 zásobu/y 2. zboží v den 1
+1. supermarket má 0 zásobu/y 1. zboží v den 2
+1. supermarket má 0 zásobu/y 2. zboží v den 2
+2. supermarket má 0 zásobu/y 1. zboží v den 2
+2. supermarket má 0 zásobu/y 2. zboží v den 2
+
+Továrna číslo 1 dovezla zboží do supermarketu číslo 1 a převezla 10 zboží typu 1 v den 1.
+Továrna číslo 1 dovezla zboží do supermarketu číslo 1 a převezla 5 zboží typu 2 v den 1.
+Továrna číslo 2 dovezla zboží do supermarketu číslo 2 a převezla 5 zboží typu 1 v den 1.
+Továrna číslo 2 dovezla zboží do supermarketu číslo 2 a převezla 10 zboží typu 2 v den 1.
+Továrna číslo 1 dovezla zboží do supermarketu číslo 1 a převezla 5 zboží typu 1 v den 2.
+Továrna číslo 1 dovezla zboží do supermarketu číslo 1 a převezla 10 zboží typu 2 v den 2.
+Továrna číslo 2 dovezla zboží do supermarketu číslo 2 a převezla 10 zboží typu 1 v den 2.
+Továrna číslo 2 dovezla zboží do supermarketu číslo 2 a převezla 5 zboží typu 2 v den 2.
+
+Celkový čas běhu simulace je: 0 sekund.
+
+Celkova cena je: 67.0
